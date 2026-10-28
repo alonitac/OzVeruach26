@@ -101,4 +101,5 @@ The terminal inside VS Code must be Ubuntu on WSL. Make that the default, so new
 5. Confirm the prompt looks like `yourname@computer:~$`.
 
 
-> [!TIP] Turn on Auto Save from **File** -> **Auto Save**.
+> [!TIP]
+> Turn on Auto Save from **File** -> **Auto Save**.

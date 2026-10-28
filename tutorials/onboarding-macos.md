@@ -58,7 +58,8 @@ You are free to use any IDE you like, but we recommend VS Code, it's lightweight
 Download and install VS Code:
    https://code.visualstudio.com/Download
 
-> [!TIP] Turn on Auto Save from **File** -> **Auto Save**.
+> [!TIP]
+> Turn on Auto Save from **File** -> **Auto Save**.
 
 ### Extensions
 
