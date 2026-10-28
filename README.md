@@ -32,9 +32,9 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 <table width="100%">
 <tr><th>#</th><th>Topic</th><th>Tutorial</th><th colspan="3">Resources</th></tr>
 
-<tr>
- <td align="center" colspan="8"><br><b>App I: <a href="https://github.com/alonitac/RegulatoryRadarDemo">Regulatory Radar Demo App</a></b><br><br></td>
-</tr>
+<!-- <tr>
+ <td align="center" colspan="8"><br><b>APP</b><br><br></td>
+</tr> -->
 
 <tr>
  <td>1</td>
