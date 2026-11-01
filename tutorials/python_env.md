@@ -23,7 +23,7 @@ The registry service lives here:
 services/registry-service/
   pyproject.toml          dependencies for this service
   uv.lock                 exact versions uv will install
-  src/registry/main.py    the FastAPI application
+  src/main.py    the FastAPI application
 ```
 
 ## What a Python environment is
@@ -124,7 +124,7 @@ One person runs `uv lock --upgrade`, tests the service, and commits `uv.lock`. E
 
 The debugger pauses the program on a line you choose, so you can inspect variables and step forward.
 
-1. Open `services/registry-service/src/registry/main.py`.
+1. Open `services/registry-service/src/main.py`.
 2. Click in the gutter next to `return {"status": "ok"}`. A red dot marks the breakpoint.
 3. Open **Run and Debug** (`Ctrl+Shift+D`).
 4. Choose **registry-service** and start it.
