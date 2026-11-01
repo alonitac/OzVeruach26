@@ -122,6 +122,29 @@ One person runs `uv lock --upgrade`, tests the service, and commits `uv.lock`. E
 
 ## Debug the service in VS Code
 
+> [!IMPORTANT]
+> Create the following `.vscode/launch.json` file (this version contains a fix to the existing file):
+> ```json
+> {
+>  "version": "0.2.0",
+>  "configurations": [
+>   {
+>     "name": "registry-service",
+>     "type": "debugpy",
+>     "request": "launch",
+>     "python": "${workspaceFolder}/services/registry-service/.venv/bin/python",
+>     "module": "uvicorn",
+>     "args": ["main:app", "--host", "127.0.0.1", "--port", "8000"],
+>     "cwd": "${workspaceFolder}/services/registry-service",
+>     "jinja": true,
+>     "justMyCode": true
+>   }
+>  ]
+> }
+> ```
+
+
+
 The debugger pauses the program on a line you choose, so you can inspect variables and step forward.
 
 1. Open `services/registry-service/src/main.py`.
@@ -130,6 +153,8 @@ The debugger pauses the program on a line you choose, so you can inspect variabl
 4. Choose **registry-service** and start it.
 
 That launch configuration runs uvicorn with the service folder as the working directory. Open http://127.0.0.1:8000/health. Execution stops on the return line. Use the debug toolbar to continue.
+
+
 
 # Exercises
 
