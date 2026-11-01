@@ -135,12 +135,76 @@ That launch configuration runs uvicorn with the service folder as the working di
 
 ### :pencil2: Stop the next major
 
-`>=` lets a future upgrade install the next major. That major can change how you call the API and break production. `~=` keeps newer minors and patches, and leaves the next major for a manual edit.
+This exercise shows how uv handles minor and major version changes.
 
 Work in `services/registry-service`.
 
-1. Open `pyproject.toml` and copy one dependency written with `>=`. From that version, write three releases: a newer patch, a newer minor, and the next major. Which of the three does the current line allow?
-2. Rewrite that line. `>=1.4.2` becomes `~=1.4` (major and minor only). Save the file. For a `0.x` package the same rule gives `~=0.115` from `>=0.115.0`.
-3. Mark the same three releases against the new line. The next major is rejected. Then say what `~=1.4.2` (three numbers) would reject that `~=1.4` still allows.
-4. Run `uv lock`. It rewrites `uv.lock` inside the new range. If the command fails, the version you wrote does not contain the version already in the lock. Fix the line and run `uv lock` again.
-5. The next major of that package is published, and this service is not ready for it. What stays as it is, so `uv lock --upgrade` cannot select that major? When the team is ready, what do you edit by hand, and which file does one person commit so every developer and production move to it together?
+1. Open `pyproject.toml`. Pin both packages to these exact versions.
+
+```toml
+dependencies = [
+    "fastapi==0.115.0",
+    "uvicorn==0.32.0",
+]
+```
+
+2. Lock that set and install it:
+
+```bash
+uv lock
+uv sync
+```
+
+As seen, `==` left no room for a newer release.
+
+3. Change both lines to `~=` and drop the patch number.
+
+```toml
+dependencies = [
+    "fastapi~=0.115",
+    "uvicorn~=0.32",
+]
+```
+
+4. Upgrade inside that range and install again:
+
+```bash
+uv lock --upgrade
+uv sync
+```
+
+`uv lock --upgrade` prints an `Updated` line for each package that moved.
+Now both versions are newer than the pins, and both still start with `0`. 
+
+FastAPI and uvicorn have no `1.0` release, so this step stays inside `0.x`.
+
+5. Now let's install a package that has a major version.
+  Add `rich`, pinned to an old major:
+
+```toml
+dependencies = [
+    "fastapi~=0.115",
+    "uvicorn~=0.32",
+    "rich==13.0.0",
+]
+```
+
+6. Lock and install:
+
+```bash
+uv lock
+uv sync
+```
+
+7. Change that line to `rich~=13.0`. Save, then upgrade and check again:
+
+```bash
+uv lock --upgrade
+uv sync
+```
+
+`rich` moves from `13.0.0` to a newer `13` release. The first number stays `13`. The command does not select `15.0.0`.
+
+8. Allow the new major. Change the line to `rich~=15.0`, save, and run the same two commands. `uv lock --upgrade` crossed that major only after you edited `pyproject.toml`.
+
+9. Remove the `rich` line. Run `uv lock` and `uv sync`. Leave FastAPI and uvicorn on `~=`.
