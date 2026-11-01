@@ -118,6 +118,10 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 <tr>
+ <td align="center" colspan="8"><br><b>Task P1:<a href="tasks/p1_registry_api.md">Registry API</a></b><br><br></td>
+</tr>
+
+<tr>
  <td>9</td>
  <td>Coding Agents</td>
  <td>Coding Agents</td>
