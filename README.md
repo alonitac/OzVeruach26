@@ -59,7 +59,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td>Linux</td>
  <td><a href="tutorials/linux_intro.md">Linux intro</a></td>
  <td align="center"></td>
- <td align="center"></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"></td>
 </tr>
 
@@ -68,7 +68,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td>Linux</td>
  <td><a href="tutorials/linux_file_management.md">Linux file management</a></td>
  <td align="center"></td>
- <td align="center"></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_file_management.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/linux_file_management.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
 </tr>
 
@@ -77,7 +77,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td>Linux</td>
  <td><a href="tutorials/io_redirection.md">IO redirection</a></td>
  <td align="center"></td>
- <td align="center"></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_io_redirection.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"><a href="tutorials/io_redirection.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
 </tr>
 
@@ -86,7 +86,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td>Linux</td>
  <td>Processes</td>
  <td align="center"></td>
- <td align="center"></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_processes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"></td>
 </tr>
 
@@ -95,7 +95,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td>Linux</td>
  <td>Environment variables</td>
  <td align="center"></td>
- <td align="center"></td>
+ <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_environment_variables.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
  <td align="center"></td>
 </tr>
 
