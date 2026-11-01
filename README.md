@@ -40,7 +40,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td>0</td>
  <td></td>
  <td>About this course</td>
- <td align="center"><a target="_blank" href="slides/course-workflow.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/course-workflow.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
  <td align="center"></td>
  <td align="center"></td>
 </tr>
