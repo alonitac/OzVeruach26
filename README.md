@@ -56,6 +56,15 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 
 <tr>
  <td>2</td>
+ <td>HTTP</td>
+ <td><a href="tutorials/http_and_api.md">HTTP and API</a></td>
+ <td align="center"></td>
+ <td align="center"></td>
+ <td align="center"></td>
+</tr>
+
+<tr>
+ <td>3</td>
  <td>Linux</td>
  <td><a href="tutorials/linux_intro.md">Linux intro</a></td>
  <td align="center"></td>
@@ -64,7 +73,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 <tr>
- <td>3</td>
+ <td>4</td>
  <td>Linux</td>
  <td><a href="tutorials/linux_file_management.md">Linux file management</a></td>
  <td align="center"></td>
@@ -73,7 +82,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 <tr>
- <td>4</td>
+ <td>5</td>
  <td>Linux</td>
  <td><a href="tutorials/io_redirection.md">IO redirection</a></td>
  <td align="center"></td>
@@ -82,7 +91,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 <tr>
- <td>5</td>
+ <td>6</td>
  <td>Linux</td>
  <td>Processes</td>
  <td align="center"></td>
@@ -91,7 +100,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 <tr>
- <td>6</td>
+ <td>7</td>
  <td>Linux</td>
  <td>Environment variables</td>
  <td align="center"></td>
@@ -100,7 +109,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 <tr>
- <td>7</td>
+ <td>8</td>
  <td>Git</td>
  <td>Git intro</td>
  <td align="center"></td>
@@ -109,7 +118,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 <tr>
- <td>8</td>
+ <td>9</td>
  <td>Coding Agents</td>
  <td>Coding Agents</td>
  <td align="center"></td>
