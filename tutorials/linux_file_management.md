@@ -257,9 +257,5 @@ Check that `foreign` can't access your directory.
 Put the permissions back to how they were.
 
 
-### :pencil2: Files archive
-
-Archive the contents of your home directory (including any subdirectories) using `tar`.
-Now extract the contents into a `backup` directory.
 
 [linux_links]: https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/linux_links.png
