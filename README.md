@@ -93,19 +93,19 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 <tr>
  <td>6</td>
  <td>Linux</td>
- <td>Processes</td>
+ <td><a href="tutorials/linux_processes.md">Processes</a></td>
  <td align="center"></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_processes.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"></td>
+ <td align="center"><a href="tutorials/linux_processes.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
 </tr>
 
 <tr>
  <td>7</td>
  <td>Linux</td>
- <td>Environment variables</td>
+ <td><a href="tutorials/linux_env_vars.md">Environment variables</a></td>
  <td align="center"></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/linux_environment_variables.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
- <td align="center"></td>
+ <td align="center"><a href="tutorials/linux_env_vars.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
 </tr>
 
 <tr>
