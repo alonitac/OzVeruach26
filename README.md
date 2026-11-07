@@ -110,7 +110,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 
 <tr>
  <td>8</td>
- <td>Bash</td>
+ <td>Linux</td>
  <td><a href="tutorials/bash_command_techniques.md">Bash command techniques</a></td>
  <td align="center"></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/bash_command_techniques.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
@@ -119,7 +119,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 
 <tr>
  <td>9</td>
- <td>Bash</td>
+ <td>Linux</td>
  <td><a href="tutorials/bash_variables.md">Bash variables</a></td>
  <td align="center"></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/bash_variables.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
@@ -128,7 +128,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 
 <tr>
  <td>10</td>
- <td>Bash</td>
+ <td>Linux</td>
  <td><a href="tutorials/bash_conditional_statements.md">Bash conditional statements</a></td>
  <td align="center"></td>
  <td align="center"><a target="_blank" href="https://alonitac.github.io/DevOpsTheHardWay/multichoice-questions/bash_conditional_statements.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/qm.png" /></a></td>
@@ -142,7 +142,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 <tr>
  <td>12</td>
  <td>Coding Agents</td>
- <td>Coding Agents</td>
+ <td><a href="tutorials/intro_to_coding_assistant.md">Coding Agents</a></td>
  <td align="center"></td>
  <td align="center"></td>
  <td align="center"></td>
