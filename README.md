@@ -148,4 +148,13 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td align="center"></td>
 </tr>
 
+<tr>
+ <td>13</td>
+ <td>Coding Agents</td>
+ <td><a href="tutorials/writing_skills.md">Writing Skills</a></td>
+ <td align="center"></td>
+ <td align="center"></td>
+ <td align="center"><a href="tutorials/writing_skills.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
+</tr>
+
 </table>
