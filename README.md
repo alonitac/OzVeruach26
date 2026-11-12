@@ -157,4 +157,8 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td align="center"><a href="tutorials/writing_skills.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
 </tr>
 
+<tr>
+ <td align="center" colspan="8"><br><b>Task P2: <a href="tasks/p2.md">Weather, planner, and the daily plan</a></b><br><br></td>
+</tr>
+
 </table>
