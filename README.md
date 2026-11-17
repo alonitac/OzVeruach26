@@ -161,4 +161,13 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td align="center" colspan="8"><br><b>Task P2: <a href="tasks/p2.md">Weather, planner, and the daily plan</a></b><br><br></td>
 </tr>
 
+
+<tr>
+ <td>14</td>
+ <td>UI</td>
+ <td><a href="tutorials/intro_to_ui.md">Intro to UI</a></td>
+ <td align="center"></td>
+ <td align="center"></td>
+</tr>
+
 </table>
