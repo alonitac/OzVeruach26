@@ -190,4 +190,10 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td align="center"><a href="tutorials/github_actions_intro.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
 </tr>
 
+
+<tr>
+ <td align="center" colspan="8"><br><b><a href="https://github.com/alonitac/PythonKatasOz">Python Katas</a></b><br><br></td>
+</tr>
+
+
 </table>
