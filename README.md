@@ -168,6 +168,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td><a href="tutorials/intro_to_ui.md">Intro to UI</a></td>
  <td align="center"></td>
  <td align="center"></td>
+ <td align="center"></td>
 </tr>
 
 
@@ -175,6 +176,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td>15</td>
  <td>Git</td>
  <td><a href="tutorials/git_intro.md">Intro to Git</a></td>
+ <td align="center"></td>
  <td align="center"></td>
  <td align="center"></td>
 </tr>
