@@ -196,4 +196,15 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 </tr>
 
 
+<tr>
+ <td>16</td>
+ <td>AWS</td>
+ <td><a href="tutorials/aws_intro.md">AWS Introduction</a></td>
+ <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/aws_intro.html"><img src="https://alonitac.github.io/DevOpsTheHardWay/img/slides.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/multichoice-questions/fursa_aws_intro.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/qm.png" /></a></td>
+ <td align="center"><a href="tutorials/aws_intro.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
+</tr>
+
+
+
 </table>
