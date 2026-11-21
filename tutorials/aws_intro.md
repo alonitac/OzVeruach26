@@ -117,50 +117,81 @@ ping <instance-public-ip>
 ```
 
 
-## :pencil2: Deploy Yolo on an EC2 instance
+## :pencil2: Deploy AgroPilot on an EC2 instance
 
+Deploy your AgroPilot `registry-service` on the instance, and run it as a Linux service. You already registered that service with systemd on your own machine in the [Processes](linux_processes.md#exercises) tutorial.
 
-**On your EC2 instance**, set up and run the service:
+**On your EC2 instance**, install the tools and get the code:
 
-1. Install required system packages:
+1. Install `git` and `curl`, then install `uv`:
+
    ```bash
    sudo apt update
-   sudo apt install python3.14-venv python3-pip libgl1
+   sudo apt install -y git curl
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   source $HOME/.local/bin/env
+   uv --version
    ```
 
-2. Create and activate a Python virtual environment:
+2. Clone your own copy of ArgoPilot, the same repository you created in the [Python environment](python_env.md) tutorial:
+
    ```bash
-   python3 -m venv .venv
-   source .venv/bin/activate
+   git clone https://github.com/YOUR-USERNAME/ArgoPilot.git
+   cd ArgoPilot/services/registry-service
+   uv sync
    ```
 
-3. Clone the repository and install dependencies.
+   `uv sync` creates `.venv` and installs the locked packages, including uvicorn. It also installs the Python version the service requires.
 
-4. Run the application:
+3. Create the database. `registry.db` is not in git, so the clone does not contain it. If `seed_registry.sh` is not already in this folder, copy it here the same way you did in [Task P1](../tasks/p1_registry_api.md), then run:
+
    ```bash
-   python app.py
+   bash seed_registry.sh
    ```
-   The service listens on port `8080`.
 
-5. **Open port 8080 in your security group** so the service is reachable from the internet. You've done this before - add the appropriate inbound rule to your instance's security group.
+Register the service with systemd. Create `/etc/systemd/system/registry.service` with the unit from the [Processes](linux_processes.md#exercises) exercise, using the paths on this instance and `--host 0.0.0.0`:
 
-**On your local machine**, download the test image (the famous Beatles image):
+```text
+[Unit]
+Description=AgroPilot registry-service
+After=network.target
 
-```bash
-curl -L -o beatles.jpeg "https://github.com/alonitac/YoloService/raw/main/beatles.jpeg"
+[Service]
+WorkingDirectory=/home/ubuntu/ArgoPilot/services/registry-service
+ExecStart=/home/ubuntu/ArgoPilot/services/registry-service/.venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
 ```
 
-
-Then, send a `POST` request to the service to perform object detection:
-
-```bash
-curl -X POST -F "file=@beatles.jpeg" http://<your-instance-public-ip>:8080/predict
-```
-
-The response will include a `uid`. Use it to retrieve the detection results:
+`WorkingDirectory` is the folder that contains `main.py`. `ExecStart` is the `uvicorn` installed in that service's virtual environment. `--host 0.0.0.0` accepts connections on the instance's public address. The unit on your own machine uses `127.0.0.1`, which accepts connections only from that machine.
 
 ```bash
-curl -X GET http://<your-instance-public-ip>:8080/prediction/<uid>
+sudo systemctl daemon-reload
+sudo systemctl enable --now registry.service
+sudo systemctl status registry.service
 ```
 
-Well done!
+`enable --now` starts the service, and starts it again on every boot. On the instance itself:
+
+```bash
+curl http://127.0.0.1:8000/health
+```
+
+A running service returns `{"status":"ok"}`. Follow the log with `journalctl -fu registry.service`, the same command as in the Processes exercise.
+
+**Open port 8000 in your security group.** You did this for ping. Add an inbound rule:
+
+- **Type**: `Custom TCP`
+- **Port range**: `8000`
+- **Source**: `0.0.0.0/0`
+
+**On your local machine**, call the service through the public address:
+
+```bash
+curl http://<your-instance-public-ip>:8000/health
+curl http://<your-instance-public-ip>:8000/v1/crops
+```
+
+Stop the instance in the EC2 console when you are done. The service is enabled, so the next boot starts `registry-service` again. The public IP address may change after a stop, as noted above.
