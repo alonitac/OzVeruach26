@@ -205,6 +205,15 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
  <td align="center"><a href="tutorials/aws_intro.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
 </tr>
 
+<tr>
+ <td>17</td>
+ <td>CD</td>
+ <td><a href="tutorials/github_actions_cd.md">CD with GitHub Actions</a></td>
+ <td align="center"></td>
+ <td align="center"></td>
+ <td align="center"><a href="tutorials/github_actions_cd.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
+</tr>
+
 
 
 </table>
