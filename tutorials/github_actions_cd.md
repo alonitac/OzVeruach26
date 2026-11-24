@@ -116,3 +116,39 @@ Replace the `script` of `deploy-registry.yaml` with:
 2. Merge a second pull request with a bug. Its run deploys the bug.
 3. Open the run from step 1 and choose **Re-run all jobs**.
 4. On the instance, `git log -1 --oneline` shows the commit from step 1. Production is back on the good version, while `main` on GitHub still has the bug.
+
+### :pencil2: A pipeline that sets up the instance by itself
+
+Look at what the pipeline does **not** do. You created `services/registry-service/.env` on the instance by hand. You wrote `/etc/systemd/system/registry.service` by hand, and ran `systemctl enable` by hand. You cloned the repo and installed `uv` by hand.
+
+None of that is in git, and none of it is in the pipeline. If the instance dies, nobody remembers exactly what was on it. If you add a setting to `.env` on your laptop, production doesn't get it until someone SSHs in and types it.
+
+Given a **new, clean EC2 instance**, a run of the pipeline should bring production up, with no manual step on the instance.
+
+Modify your deploy workflow to write `.env` and install `registry.service` on every run.
+
+Notes:
+
+- The unit file is not a secret. Commit it to the repo, next to the service, and let the pipeline copy it to `/etc/systemd/system/`.
+
+- `.env` must stay out of git. You should store secrets in **Settings** → **Secrets and variables** → **Actions**, then read them from the workflow as `${{ secrets.NAME }}` and write the `.env` file on the instance. We recommend that to write the whole `.env` on every run, from scratch. Don't append to it. 
+
+- Every run has to work on a clean instance **and** on one that was already deployed 20 times. Before each step, ask: what if this already exists? Where does the repo come from on the first run? 
+
+- `systemctl restart` returns before your app finishes starting. A service that crashes on startup (for example, a missing setting) still gives you a green job. It's a good practice to end the script with a health check on the instance, so a broken start turns the job red.
+
+### :pencil2: Deploy the full stack
+
+Production runs only `registry-service`.
+
+Deploy the whole AgroPilot stack from [Task P2](../tasks/p2.md) on your instance, through the pipeline: `frontend`, `planner-service`, `weather-service`, `registry-service`, and PostgreSQL.
+
+Notes:
+
+- PostgreSQL: we prefer you run it in [Docker](https://docs.docker.com/engine/install/ubuntu/), with the official [`postgres`](https://hub.docker.com/_/postgres) image and a named volume, so the data survives a restart of the container. 
+- Each service has its own `.env`. The URLs between services point at `127.0.0.1` on the instance. The database password is a secret.
+- The grower only needs the frontend. Open port `3000` in the security group. Which other ports really need to be open to the internet, and which services can listen only on `127.0.0.1`?
+- `t3.medium` is small. Run `npm run build` once per deploy and serve with `npm run start`, not `npm run dev`.
+- The clean instance test from the previous exercise still holds, for the whole stack.
+
+Open `http://<elastic-ip>:3000` on your phone, and see today's plan for North block.
