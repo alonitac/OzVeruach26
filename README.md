@@ -228,7 +228,7 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 
 
 <tr>
- <td align="center" colspan="8"><br><b>Task P3: <a href="tasks/mid_project.md">Mid-project</a></b><br><br></td>
+ <td align="center" colspan="8"><br><b><a href="tasks/mid_project.md">Mid-project</a></b><br><br></td>
 </tr>
 
 
