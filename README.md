@@ -216,4 +216,20 @@ Please complete the Onboarding tutorial **before the course begins (01/11/26)**:
 
 
 
+
+<tr>
+ <td>18</td>
+ <td>AWS</td>
+ <td><a href="tutorials/aws_s3.md">Simple Storage Service (S3)</a></td>
+ <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/slides/aws_s3.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/slides.png" /></a></td>
+ <td align="center"><a target="_blank" href="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/multichoice-questions/aws_s3.html"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/qm.png" /></a></td>
+ <td align="center"><a href="tutorials/aws_s3.md#exercises"><img src="https://exit-zero-academy.github.io/DevOpsTheHardWayAssets/img/pen.png" /></a></td>
+</tr>
+
+
+<tr>
+ <td align="center" colspan="8"><br><b>Task P3: <a href="tasks/mid_project.md">Mid-project</a></b><br><br></td>
+</tr>
+
+
 </table>
