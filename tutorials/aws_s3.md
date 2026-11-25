@@ -207,5 +207,3 @@ Now put the mask on: in the EC2 console, select your instance â†’ **Actions** â†
 
 Now test again
 
-# Exercises
-
